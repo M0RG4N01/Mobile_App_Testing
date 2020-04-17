@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Testing.MainPage">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="20, 40, 20, 20" />
+            <On Platform="Android, UWP" Value="20" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" BackgroundColor="White" HorizontalOptions="CenterAndExpand">
+            <Image Source="{OnPlatform Default=https://cdn.discordapp.com/attachments/368118450322669569/576895964724461608/LYHMEHosting-Black.png}">
+            </Image>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    
+    <Grid x:Name="grd" RowSpacing="20" ColumnSpacing="20" Padding="10" Margin="0" >
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Button Grid.Row="0" Grid.Column="0" Text=" Order "
+                FontSize="25" BorderColor="#ddd" BorderWidth="2" TextColor="#96BF3D" Clicked="OnOrderClicked"/>
+        
+        <Button Grid.Row="0" Grid.Column="1" Text=" Billing "
+                FontSize="25" BorderColor="#ddd" BorderWidth="2" TextColor="#96BF3D" Clicked="OnBillingClicked"/>
+
+        <Button Grid.Row="1" Grid.Column="0" Text=" Support "
+                FontSize="25" BorderColor="#ddd" BorderWidth="2" TextColor="#96BF3D" Clicked="OnSupportClicked"/>
+
+        <Button Grid.Row="1" Grid.Column="1" Text=" Panel "
+                FontSize="25" BorderColor="#ddd" BorderWidth="2" TextColor="#96BF3D" Clicked="OnPanelClicked"/>
+        
+        <Button Grid.Row="2" Grid.Column="0" Text=" Discord "
+                FontSize="25" BorderColor="#ddd" BorderWidth="2" TextColor="#96BF3D" Clicked="OnDiscordClicked"/>
+        
+        <Button Grid.Row="2" Grid.Column="1" Text=" Status "
+                FontSize="25" BorderColor="#ddd" BorderWidth="2" TextColor="#96BF3D" Clicked="OnStatusClicked"/>
+
+    </Grid>
+
+        <!--<StackLayout>
+        <StackLayout HorizontalOptions="Center">
+
+            <Button Text=" Order "
+                    Font="Medium"
+                    StyleId="LabelDemoPage"
+                    TextColor="#96BF3D"
+                    BorderColor="#ddd"
+                    BorderWidth="2"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnButtonClicked" />
+
+            <Button Text=" Billing "
+                    Font="Medium"
+                    StyleId="ImageDemoPage"
+                    TextColor="#96BF3D"
+                    BorderColor="#ddd"
+                    BorderWidth="2"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnButtonClicked" />
+
+            <Button Text=" Support "
+                    Font="Medium"
+                    StyleId="BoxViewDemoPage"
+                    TextColor="#96BF3D"
+                    BorderColor="#ddd"
+                    BorderWidth="2"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnButtonClicked" />
+
+            <Button Text=" Panel "
+                    Font="Medium"
+                    StyleId="WebViewDemoPage"
+                    TextColor="#96BF3D"
+                    BorderColor="#ddd"
+                    BorderWidth="2"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnButtonClicked" />
+            
+            <Button Text=" Knowledgebase "
+                    Font="Medium"
+                    StyleId="WebViewDemoPage"
+                    TextColor="#96BF3D"
+                    BorderColor="#ddd"
+                    BorderWidth="2"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnButtonClicked" />
+            
+            <Button Text=" Status "
+                    Font="Medium"
+                    StyleId="WebViewDemoPage"
+                    TextColor="#96BF3D"
+                    BorderColor="#ddd"
+                    BorderWidth="2"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnButtonClicked" />
+            
+            
+        </StackLayout>
+     </StackLayout>-->
+
+</ContentPage>
